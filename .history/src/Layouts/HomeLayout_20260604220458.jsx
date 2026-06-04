@@ -10,19 +10,20 @@ const HomeLayout = () => {
             <header>
                 <Header></Header>
             </header>
-            <main className='w-11/12 mx-auto my-3 grid grid-cols-12'>
-                <aside className='col-span-3'>
+            <main className='w-11/12 mx-auto my-3 *:border grid grid-cols-12'>
+                <aside className='cols-s'>
                     <LeftAside></LeftAside>
                 </aside>
-                <section className='main col-span-6'>
+                <section className='main'>
                     <Outlet>
 
                     </Outlet>
                     </section>
 
-                    <aside className='col-span-3'>
+                    <aside>
                         <RightAside></RightAside>
                     </aside>
+                <section className='right_nav'></section>
             </main>
         </div>
     );
