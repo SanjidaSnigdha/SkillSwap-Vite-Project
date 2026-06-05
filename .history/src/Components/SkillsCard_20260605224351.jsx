@@ -1,0 +1,9 @@
+import React from "react";
+
+const SkillsCard = ({ skill }) => {
+  return <div>{skill.skillName}
+  <img className="w-80 h-80 rounded-2 mt-4 p-3" src={skill.image} alt="" />
+  </div>;
+};
+
+export default SkillsCard;
