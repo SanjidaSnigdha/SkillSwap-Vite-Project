@@ -1,9 +1,7 @@
-import React, { use } from "react";
+import React from "react";
 import { Link } from "react-router";
-import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -13,17 +11,6 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log({ name, photo, email, password });
-    createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-        // console.log(user)
-        setUser(user);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorMessage);
-      });
   };
   return (
     <div className="flex justify-center mt-20">
@@ -53,7 +40,6 @@ const Register = () => {
               type="text"
               className="input"
               placeholder="Photo URL"
-              required
             />
 
             {/* email */}
@@ -64,7 +50,6 @@ const Register = () => {
               type="email"
               className="input"
               placeholder="Email"
-              required
             />
 
             {/* password */}
@@ -75,7 +60,6 @@ const Register = () => {
               type="password"
               className="input"
               placeholder="Password"
-              required
             />
 
             <button type="submit" className="btn btn-primary mt-4">
