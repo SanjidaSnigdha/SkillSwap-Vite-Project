@@ -25,7 +25,7 @@ const SkillsCard = ({ skill }) => {
           {skill.rating}
         </p>
       </div>
-      <div className="mb-2 p-2">
+      <div className="mb-4 p-4">
         <Link
           to={`/skill-details/${skill.id}`}
           className="text-[#000000] font-bold"

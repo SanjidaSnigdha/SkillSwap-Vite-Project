@@ -40,7 +40,7 @@ const router = createBrowserRouter([
   {
     path: "/skill-details/:id",
     element: <SkillDetails></SkillDetails>,
-    loader: ()=> fetch("/categories.json")
+    loader: ()
   },
   {
     path: "/",

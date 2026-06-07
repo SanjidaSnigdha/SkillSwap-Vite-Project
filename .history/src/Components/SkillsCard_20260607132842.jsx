@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { Link } from "react-router";
 
+
 const SkillsCard = ({ skill }) => {
   return (
     <div className="border rounded">
@@ -25,15 +26,9 @@ const SkillsCard = ({ skill }) => {
           {skill.rating}
         </p>
       </div>
-      <div className="mb-2 p-2">
-        <Link
-          to={`/skill-details/${skill.id}`}
-          className="text-[#000000] font-bold"
-        >
-          See more...
+        <Link to={`/`} className="text-[#000000] p-3 font-bold">See more...
         </Link>
       </div>
-    </div>
   );
 };
 
