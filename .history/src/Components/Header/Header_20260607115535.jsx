@@ -9,14 +9,7 @@ const Header = () => {
 
   const handleLogout = () => {
     console.log("user trying to logout");
-    logOut()
-    .then(()=> {
-      alert("You Logged Out successfully!")
-
-    })
-    .catch((error) =>{
- console.log(error);
-    })
+    logOut().AuthContext
   };
   return (
     <div className="flex justify-between items-center w-11/12 mx-auto mt-5">

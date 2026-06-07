@@ -5,19 +5,11 @@ import { FaUserAlt } from "react-icons/fa";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
-  const { user, logOut } = use(AuthContext);
+  const { user } = use(AuthContext);
 
-  const handleLogout = () => {
-    console.log("user trying to logout");
-    logOut()
-    .then(()=> {
-      alert("You Logged Out successfully!")
-
-    })
-    .catch((error) =>{
- console.log(error);
-    })
-  };
+  const handleLogout = ()=>{
+    console.log("")
+  }
   return (
     <div className="flex justify-between items-center w-11/12 mx-auto mt-5">
       <div>{user && user.email}</div>
@@ -36,9 +28,7 @@ const Header = () => {
         <FaUserAlt className="text-[#322ad5]" size={30} />
 
         {user ? (
-          <button onClick={handleLogout} className="btn btn-primary w-20">
-            Logout
-          </button>
+          <button onClick={handleLogout} className="btn btn-primary w-20">Logout</button>
         ) : (
           <Link to="/auth/login" className="btn btn-primary w-20">
             Login

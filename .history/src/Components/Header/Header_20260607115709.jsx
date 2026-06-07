@@ -11,11 +11,7 @@ const Header = () => {
     console.log("user trying to logout");
     logOut()
     .then(()=> {
-      alert("You Logged Out successfully!")
-
-    })
-    .catch((error) =>{
- console.log(error);
+      alert("You Logged Out su")
     })
   };
   return (
