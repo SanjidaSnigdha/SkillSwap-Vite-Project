@@ -54,7 +54,7 @@ const [nameError, setNameError] = useState("");
               required
             />
 
-            {nameError && <p className="text-xs text-error">{nameError}</p>}
+            {nameError && <p className="text-red-400 text-error">{nameError}</p>}
 
             {/* photo URL */}
 

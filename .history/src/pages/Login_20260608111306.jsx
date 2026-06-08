@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+
   const [error, setError] = useState("");
   const { signIn } = use(AuthContext);
   const location = useLocation();
@@ -62,7 +63,7 @@ const Login = () => {
               <a className="link link-hover">Forgot password?</a>
             </div>
 
-            {error && <p className="text-red-400 text-xs">{error}</p>}
+            
 
             <button type="submit" className="btn btn-primary mt-4">
               Login

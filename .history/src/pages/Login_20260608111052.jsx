@@ -1,9 +1,10 @@
-import React, { use, useState } from "react";
+import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-  const [error, setError] = useState("");
+
+  const [error, setError] = use
   const { signIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,9 +24,8 @@ const Login = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        // const errorMessage = error.message;
+        const errorMessage = error.message;
         // alert(errorCode, errorMessage);
-        setError(errorCode);
       });
   };
   return (
@@ -61,8 +61,6 @@ const Login = () => {
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
-
-            {error && <p className="text-red-400 text-xs">{error}</p>}
 
             <button type="submit" className="btn btn-primary mt-4">
               Login

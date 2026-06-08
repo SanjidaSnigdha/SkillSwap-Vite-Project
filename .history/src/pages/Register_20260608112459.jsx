@@ -53,8 +53,7 @@ const [nameError, setNameError] = useState("");
               placeholder="Name"
               required
             />
-
-            {nameError && <p className="text-xs text-error">{nameError}</p>}
+            
 
             {/* photo URL */}
 

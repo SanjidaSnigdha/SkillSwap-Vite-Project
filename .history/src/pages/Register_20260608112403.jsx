@@ -4,9 +4,6 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
 const { createUser, setUser } = use(AuthContext);
-const [nameError, setNameError] = useState("");
-
-
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -53,8 +50,6 @@ const [nameError, setNameError] = useState("");
               placeholder="Name"
               required
             />
-
-            {nameError && <p className="text-xs text-error">{nameError}</p>}
 
             {/* photo URL */}
 
